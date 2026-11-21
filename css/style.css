@@ -264,13 +264,39 @@ img { display: block; max-width: 100%; }
 /* ===================================================================
    Footer + floating CTA
 =================================================================== */
-.footer { border-top: 1px solid var(--line); padding: 3rem clamp(1.2rem,5vw,3rem) 6rem; text-align: center; background: var(--footer-bg); }
+.footer { border-top: 1px solid var(--line); padding: 3.5rem clamp(1.2rem,5vw,3rem) 6rem; background: var(--footer-bg); }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 0.8fr 1fr 1.4fr; gap: 2.5rem; max-width: 1180px; margin: 0 auto 2.5rem; text-align: left; }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-col h4 { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.footer-tagline { color: var(--ink-soft); font-family: var(--sans); font-size: 0.9rem; line-height: 1.7; margin: 1rem 0 1.25rem; }
+.footer-social { display: flex; gap: 0.75rem; }
+.footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; color: var(--ink-soft); transition: color 0.2s ease, border-color 0.2s ease; }
+.footer-social a:hover { color: var(--accent); border-color: var(--accent); }
+.footer-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-list a { color: var(--ink-soft); font-family: var(--sans); font-size: 0.9rem; transition: color 0.2s ease; }
+.footer-list a:hover { color: var(--accent); }
+.footer-address { color: var(--ink-soft); font-family: var(--sans); font-size: 0.85rem; line-height: 1.7; margin-bottom: 1rem; }
+.footer-address strong { color: var(--ink); font-weight: 600; }
+.footer-reach-links { display: flex; flex-direction: column; gap: 0.5rem; font-family: var(--sans); font-size: 0.88rem; }
+.footer-reach-links a { color: var(--ink-soft); transition: color 0.2s ease; }
+.footer-reach-links a:hover { color: var(--accent); }
+.footer-reach-links i { color: var(--accent); font-size: 0.8rem; margin-right: 0.35rem; }
+.footer-hours { color: var(--ink-faint); }
+.footer-disclaimer { max-width: 1180px; margin: 0 auto 1.75rem; padding-top: 1.75rem; border-top: 1px solid var(--line); text-align: center; }
+.footer-disclaimer p { color: var(--ink-faint); font-family: var(--sans); font-size: 0.78rem; line-height: 1.7; margin-bottom: 0.4rem; }
+.footer-bottom { text-align: center; }
 .footer-top { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; }
 .footer-logo { height: 96px; width: auto; }
 .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem; }
 .footer-links a { color: var(--ink-soft); font-family: var(--sans); font-size: 0.92rem; transition: color 0.2s ease; }
 .footer-links a:hover { color: var(--accent); }
 .footer-copy { color: var(--ink-faint); font-size: 0.85rem; }
+.footer-copy a { color: var(--ink-soft); transition: color 0.2s ease; }
+.footer-copy a:hover { color: var(--accent); }
+.footer-credit { color: var(--ink-faint); font-size: 0.85rem; margin-top: 0.3rem; }
+.footer-credit a { color: var(--ink-soft); transition: color 0.2s ease; }
+.footer-credit a:hover { color: var(--accent); }
 .float-cta { position: fixed; bottom: 1.6rem; right: 1.6rem; z-index: 900; width: 58px; height: 58px; display: grid; place-items: center; border-radius: 50%;
   background: linear-gradient(135deg, var(--accent), var(--accent-deep)); color: var(--on-accent); font-size: 1.3rem;
   box-shadow: 0 12px 30px -6px var(--accent-shadow); transition: transform 0.25s ease; animation: floatIn 0.6s ease both; }
