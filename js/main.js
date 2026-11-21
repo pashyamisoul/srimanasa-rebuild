@@ -1,5 +1,5 @@
 /* ===================================================================
-   Srimanasa — interactions
+   Srimanasa: interactions
 =================================================================== */
 (function () {
   "use strict";
@@ -8,7 +8,7 @@
   const navToggle = document.getElementById("navToggle");
   const navLinks = document.getElementById("navLinks");
 
-  /* ---- Theme switcher (compare palettes) — only on the combined page ---- */
+  /* ---- Theme switcher (compare palettes), only on the combined page ---- */
   const themeSwitch = document.getElementById("themeSwitch");
   if (themeSwitch) {
     const root = document.documentElement;
